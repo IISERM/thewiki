@@ -1,0 +1,8 @@
+---
+title: "Table of Contents"
+listing:
+    contents: .
+    type: table
+    sort: "title"
+---
+

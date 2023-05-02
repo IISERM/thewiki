@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: "../_site"
+
+website:
+  title: "The IISERM Wiki"
+  sidebar:
+    title: "The IISER Mohali Wiki"
+    search: true
+    contents:
+      - href: index.qmd
+        text: Home
+      - toc.qmd
+      - proxy.qmd
+  search:
+    location: navbar
+    type: overlay
+
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    toc: true

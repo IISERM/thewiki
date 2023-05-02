@@ -1,0 +1,134 @@
+---
+title: "Proxy"
+author:
+    - Dhruva Sambrani (MS18163)
+---
+
+# What's a Proxy 
+
+The IISER network is a bit different than your usual home/WiFi network. Along with connecting to the WiFi with the WiFi key provided by the Computer Center, you need to also set a setting known as the proxy server.
+
+The proxy server basically acts as an intermediate hop before your data reaches the internet. You can't bypass the proxy server unless you use a VPN. We need to tell applications which proxy server to use.
+
+# The proxy settings
+
+```yaml
+ip:
+    nkn1: 172.16.2.250
+    bsnl1: 172.16.2.251
+    bsnl2: 172.16.2.252
+    nkn2: 172.16.2.253
+port: 3128
+url: http://ip:port/
+```
+
+::: {.callout-warn}
+
+Note that the institute doesn't have an HTTPS proxy. Thus, for both HTTP and HTTPS proxy settings, use `http://ip:port/`.
+
+:::
+
+# Setting the proxy url
+
+## Windows
+
+For GUI Windows applications, open Settings, search for Proxy and set proxy. Follow [this](https://www.digitalcitizen.life/how-set-proxy-server-windows-10/)
+
+If in case you are unable to connect despite changing the proxy, try the restart-every-layer-method. Try restarting the application/browser. Then try signing out and signing back in (not just _locking_). Then try restarting the computer. Or you know what? Just restart the computer. It generally works.
+
+## Linux
+
+### Global
+
+The method is largely similar to the windows way. Open settings, search for Proxy and set proxy.
+
+Instructions for [GNOME](https://phoenixnap.com/kb/ubuntu-proxy-settings) and [KDE](https://askubuntu.com/a/444887). If you use the default DE of Ubuntu, you are probably using GNOME.
+
+If you aren't using a DE, but rather relying on a WM like i3, then you will also need to set the environment variables in `/etc/environment`, and log out and log back in every time you need to change the proxy settings, or at least stop the WM, run `source /etc/environment` and start the WM again. If this gets annoying, check out the [Expert Tips section](#expert-tips)This is because all children processes use the same proxy settings as the parent, and changing the proxy settings isn't enough to change your WM's environment variables. For a much more detailed explanation and Tips and Tricks, see [the archwiki page on proxies](https://wiki.archlinux.org/title/Proxy_server). Read it, its useful.
+
+### Shell 
+
+Almost all Linux applications, especially command line applications use the following envars. Simply paste this in your `.bashrc` or equivalent, making sure to replace `ip` and `port`.
+
+```bash
+export http_proxy="http://ip:port/"
+export ftp_proxy="ftp://ip:port/"
+export rsync_proxy="rsync://ip:port/"
+export no_proxy="localhost,ip/32,192.168.1.1/32,::1,*.local,.ts.net"
+export HTTP_PROXY="http://ip:port/"
+export FTP_PROXY="ftp://ip:port/"
+export RSYNC_PROXY="rsync://ip:port/"
+export NO_PROXY="localhost,ip/32,192.168.1.1/32,::1,*.local"
+export https_proxy="http://ip:port/"
+export HTTPS_PROXY="http://ip:port/"
+```
+
+### Final thoughts
+
+Setting the proxy settings via Settings and the envars should generally be enough for most applications. Some applications, notably, all browsers and Zoom, have an in-app way to set the proxy too.
+
+## Specific Applications
+
+This should only be used if previous methods fail.
+
+### Conda
+
+Write the following to `~/.condarc`. On windows, this would be `C:/Users/yourname/.condarc`.
+
+```yaml
+channels:
+- defaults
+
+# Show channel URLs when displaying what is going to be downloaded and
+# in 'conda list'. The default is False.
+show_channel_urls: True
+allow_other_channels: True
+
+proxy_servers:
+    http: http://ip:port
+    https: http://ip:port
+
+ssl_verify: False
+```
+
+### pip
+
+Follow one of [these](https://pip.pypa.io/en/stable/user_guide/#using-a-proxy-server)
+
+### Julia
+
+Add these lines to `~/.julia/config/startup.jl`, which will execute on each new Julia session:
+
+```julia
+ENV["HTTP_PROXY"] = "http://ip:port"
+ENV["HTTPS_PROXY"] = "http://ip:port"
+```
+
+### NPM
+
+Write this to `~/.npmrc`
+
+```code
+strict-ssl=false
+proxy=http://127.0.0.1:8888/
+https-proxy=http://127.0.0.1:8888/
+```
+
+# Expert Tips {#expert-tips}
+
+## Double Proxy
+
+How to cut a diamond? With a diamond. How to fix most proxy problems? With another proxy. Set up a local transparent proxy server at `127.0.0.1:8888`, and point everything at it. Then set the upstream proxy of your proxy server as the IISER server. Most transparent proxies allow you to hot change the upstream. Thus, you can change/turn off the IISER proxy without having to change app settings. One such server is [tinyproxy](https://tinyproxy.github.io/).
+
+```code
+Port 8888
+Listen 127.0.0.1
+Timeout 600
+Allow 127.0.0.1
+Upstream http 172.16.2.250:3128
+```
+
+## Sshutling through space
+
+_Some_ limitations of the proxy server, particularly blocked email ports can be overcome by tcp-over-ssh tunnelling. Use [sshutle](https://github.com/sshuttle/sshuttle) and ssh to a **server that sits outside the institute network**.
+
