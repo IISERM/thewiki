@@ -12,6 +12,7 @@ website:
         text: Home
       - toc.qmd
       - proxy.qmd
+      - thesis-writing.qmd
   search:
     location: navbar
     type: overlay
