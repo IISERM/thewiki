@@ -4,9 +4,18 @@ The IISERM Wiki
 
 ## Editing and Building the wiki
 
-The wiki is built using a github action so that every commit/push to the repo triggers a jekyll build from `./src` and deploys to <https://iiserm.github.io/thewiki>
+The wiki is built using quarto and deployed to gh-pages, which has a workflow that deploys to the website every push to the gh-pages branch. 
 
-So just change content in `./src` in markdown files and commit/push.
+Thus, the steps to edit are
+
+1. You must clone
+2. Install [Quarto](https://quarto.org/)
+3. Edit files in `./src`
+    - [] Make sure you add a page title to every page. See one of the other pages to understand how to do that.
+    - [] Make sure you add your name in the `author` section of the page.
+    - [] Make sure you add your name in the `index.qmd` file's `author` section.
+4. Run `quarto publish gh-pages`
+5. Wait.
 
 ### Github Actions
 

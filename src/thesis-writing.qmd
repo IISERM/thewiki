@@ -1,0 +1,88 @@
+---
+title: "Thesis Writing"
+author:
+  - ChatGPT
+  - Dhruva Sambrani (MS18163)
+---
+
+# Thesis Writing
+
+The thesis acts as a final step of the BS-MS course, and it is something of a pride to hold it in your hand after it has been printed. But the journey from your research notes to a final document is not easy.
+
+Writing a master's thesis can be a challenging task, but with the right tools and techniques, you can make the process smoother and more efficient. One of the key elements of a well-written thesis is proper typesetting, which involves formatting the text, citations, references, and other elements to ensure clarity, consistency, and accuracy.
+
+To help you with this task, there are several typesetting tools and software programs that you can use. These tools can automate many of the tedious and time-consuming tasks involved in typesetting, such as formatting citations and creating a table of contents. They can also help you to adhere to the specific guidelines and standards required by IISER or your Department.
+
+We'll focus on few tools, particularly [Quarto](#quarto), [LaTeX](#latex) and [Word](#word). We'll provide a general workflow for each of these.
+
+# Quarto {#quarto}
+
+[Quarto](https://quarto.org/) is a scientific document creation tool that enables researchers, scholars, and scientists to easily create and publish high-quality documents. It allows users to write content in Markdown, a simple and flexible markup language, and then compile it into a wide range of formats, including PDF, HTML, and EPUB. Quarto also offers features such as automated citations, version control, and collaborative editing, making it a powerful tool for scientific communication and collaboration.
+
+First, install and compile your first document by following [the official Quarto Getting Started page](https://quarto.org/docs/get-started/hello/vscode.html). We **strongly** suggest using VS Code as the editor of choice, but you can use the others if you wish.
+
+Then read the [Tutorial on Authoring quarto documents](https://quarto.org/docs/get-started/authoring/). Now you should be comfortable with what Quarto can do, and how to do basic things with it.
+
+For a tutorial more specific to the book format we will use, see [this](https://quarto.org/docs/books/)
+
+Now, download the [IISER Master Thesis Quarto Template](https://github.com/IISERM/Master-Thesis-Quarto-Template), and follow the instructions on that page.
+
+::: {.callout-tip}
+
+See the [citations section](#citations)
+
+:::
+
+# LaTeX {#latex}
+
+LaTeX is a document preparation system used in academia and scientific publishing. It separates content from formatting, offers built-in commands for formatting text and equations, and handles mathematical symbols easily. It's complex and has a steeper learning curve, but it's a powerful tool for creating high-quality and professional-looking documents.
+
+::: {.callout-warn}
+Use LaTeX only if you have used it for other documents and stuff (not just the math part, but also the layouting part), and are comfortable with it. **Do not** try to learn LaTeX layouting just before the thesis writing, you _will_ get annoyed. If you need LaTeX only because you have math, use [Quarto](#quarto).
+:::
+
+For this, you can either use a local install or Overleaf. Download and extract the IISER Mohali latex template from [here](https://www.iisermohali.ac.in/forms/academics/forms). Fill in the information in the template, and compile.
+
+::: {.callout-caution}
+Always follow these steps:
+
+1. Write your content and only format the content. That is, put bold italics etc, but do not worry about how it sits in the page. If an image is 4 pages away, it is ok for now.
+   - Make sure to **cite as you write**. Citing things later is an immense pain. One alternative is to write `#cite#einstein2004`, or something like that, so that you can later do a find-replace for `#cite#`, and you will not miss anything.
+2. Now make sure EVERYTHING of the template is correct. Particularly, make sure margins are correct. Make sure table of contents, figures and tables are correct.
+3. Now you can attempt doing the smaller formats and try to get your floats where they should be.
+   :::
+
+# Microsoft Word {#word}
+
+Microsoft Word is a word processing software widely used for creating documents in various formats, such as reports, essays, and letters. It provides a user-friendly interface and features such as formatting, spell checking, and grammar checking. It also supports images, tables, and charts, making it a versatile tool for writing and publishing.
+
+There is no template as such for Word, but you can visually emulate [the template](https://www.iisermohali.ac.in/forms/academics/forms).
+
+## Tips
+
+1. DO NOT convert between Word and Google Docs. You will lose formatting between conversions, and it is not worth it. Use either of them, preferably Microsoft Word.
+2. Make sure the margins and template is correct BEFORE you start writing. Changing the margins and page size later can screw up the placement of images, and it is a pain to fix it later. The page size should be A4, and margins should be the `Mirrored` option.
+3. If you are finding it hard to align images, put the image in `Tight` word wrap mode.
+4. Do not manually make image captions with text or text boxes. Instead, right click on the image, and click the option to `Add an image caption`, and add it like that.
+5. Make a List of figures by going to the `References` tab, and clicking `Insert List of Figures`. This table should be automatically generated. Do not attempt to make it automatically, because any changes in the image will force you to make many changes. Similarly make the table of contents
+6. If you want short captions in the List of Figures instead of the complete caption, use [the following work-around](https://superuser.com/a/1560893).
+7. **DO NOT** press a lot of `Enter`s to complete the page to start the next chapter. Instead use a Page Break (`Ctrl-Enter`)
+
+# Citations {#citations}
+
+Citations and references require three things
+
+1. Inline citations, where the reference is denoted within the text
+2. References, the list of all references
+3. Information regarding the references
+
+The method of adding inline references depends on which format you choose. References are generally automatically generated. 
+
+Information regarding the references is what is the hardest part of the whole citation process. Normally, you would generate a bibtex file (generally `references.bib`). You can either manually make the bibtex file by copying the bibtex files from the internet into a single file, but a largely simpler method is to use Zotero.
+
+Create a new `Collection` for your thesis references. Add references one by one using the doi via the "Add items by identifier button" ![Add Items by identifier button](./images/zotero-magic.png). Now export the `Collection` and choose the file type as BibTex. Rename the file as references.bib, and use it in whatever format you use.
+
+## CSL Styles
+
+CSL Styles are ways to change how latex (and thus also quarto) render the citations and references. See [here for a full list](https://www.zotero.org/styles). Use the one that makes most sense for you, and your field. Physics _generally_ uses `numeric` formats, and HSS uses `author-date`. Download your choice of csl, and use it in latex or quarto.
+
