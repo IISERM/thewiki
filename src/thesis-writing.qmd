@@ -50,8 +50,13 @@ Always follow these steps:
    - Make sure to **cite as you write**. Citing things later is an immense pain. One alternative is to write `#cite#einstein2004`, or something like that, so that you can later do a find-replace for `#cite#`, and you will not miss anything.
 2. Now make sure EVERYTHING of the template is correct. Particularly, make sure margins are correct. Make sure table of contents, figures and tables are correct.
 3. Now you can attempt doing the smaller formats and try to get your floats where they should be.
-   :::
+:::
 
+::: {.callout-tip}
+
+See the [citations section](#citations)
+
+:::
 # Microsoft Word {#word}
 
 Microsoft Word is a word processing software widely used for creating documents in various formats, such as reports, essays, and letters. It provides a user-friendly interface and features such as formatting, spell checking, and grammar checking. It also supports images, tables, and charts, making it a versatile tool for writing and publishing.
