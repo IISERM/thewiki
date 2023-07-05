@@ -2,6 +2,7 @@
   {
     "listing": "/toc.html",
     "items": [
+      "/server_access.html",
       "/proxy.html",
       "/index.html",
       "/thesis-writing.html"

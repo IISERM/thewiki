@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dhruva Sambrani (MS18163)">
 
-<title>The IISERM Wiki - Proxy</title>
+<title>The IISERM Wiki - Institute Server Access</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./proxy.html">Proxy</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      The IISER Mohali Wiki
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -150,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./proxy.html" class="sidebar-item-text sidebar-link active">
+  <a href="./proxy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Proxy</span></a>
   </div>
 </li>
@@ -170,30 +172,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#whats-a-proxy" id="toc-whats-a-proxy" class="nav-link active" data-scroll-target="#whats-a-proxy">What’s a Proxy</a></li>
-  <li><a href="#the-proxy-settings" id="toc-the-proxy-settings" class="nav-link" data-scroll-target="#the-proxy-settings">The proxy settings</a></li>
-  <li><a href="#setting-the-proxy-url" id="toc-setting-the-proxy-url" class="nav-link" data-scroll-target="#setting-the-proxy-url">Setting the proxy url</a>
+  <li><a href="#institute-server-access" id="toc-institute-server-access" class="nav-link active" data-scroll-target="#institute-server-access">Institute Server Access</a></li>
+  <li><a href="#why-should-i-bother" id="toc-why-should-i-bother" class="nav-link" data-scroll-target="#why-should-i-bother">Why should I bother?</a></li>
+  <li><a href="#interesting-lets-go" id="toc-interesting-lets-go" class="nav-link" data-scroll-target="#interesting-lets-go">Interesting! Let’s go</a>
   <ul class="collapse">
-  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
-  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux</a>
+  <li><a href="#setting-up-your-device" id="toc-setting-up-your-device" class="nav-link" data-scroll-target="#setting-up-your-device">Setting up your device</a></li>
+  <li><a href="#termius-setup" id="toc-termius-setup" class="nav-link" data-scroll-target="#termius-setup">Termius setup</a>
   <ul class="collapse">
-  <li><a href="#global" id="toc-global" class="nav-link" data-scroll-target="#global">Global</a></li>
-  <li><a href="#shell" id="toc-shell" class="nav-link" data-scroll-target="#shell">Shell</a></li>
-  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts">Final thoughts</a></li>
+  <li><a href="#add-hosts" id="toc-add-hosts" class="nav-link" data-scroll-target="#add-hosts">Add Hosts</a></li>
+  <li><a href="#add-port-forward-rules" id="toc-add-port-forward-rules" class="nav-link" data-scroll-target="#add-port-forward-rules">Add Port Forward rules</a></li>
   </ul></li>
-  <li><a href="#specific-applications" id="toc-specific-applications" class="nav-link" data-scroll-target="#specific-applications">Specific Applications</a>
-  <ul class="collapse">
-  <li><a href="#conda" id="toc-conda" class="nav-link" data-scroll-target="#conda">Conda</a></li>
-  <li><a href="#pip" id="toc-pip" class="nav-link" data-scroll-target="#pip">pip</a></li>
-  <li><a href="#julia" id="toc-julia" class="nav-link" data-scroll-target="#julia">Julia</a></li>
-  <li><a href="#npm" id="toc-npm" class="nav-link" data-scroll-target="#npm">NPM</a></li>
+  <li><a href="#server-setup" id="toc-server-setup" class="nav-link" data-scroll-target="#server-setup">Server setup</a></li>
+  <li><a href="#vnc-viewer-setup" id="toc-vnc-viewer-setup" class="nav-link" data-scroll-target="#vnc-viewer-setup">VNC Viewer setup</a></li>
+  <li><a href="#done" id="toc-done" class="nav-link" data-scroll-target="#done">DONE!</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#expert-tips" id="toc-expert-tips" class="nav-link" data-scroll-target="#expert-tips">Expert Tips</a>
-  <ul class="collapse">
-  <li><a href="#double-proxy" id="toc-double-proxy" class="nav-link" data-scroll-target="#double-proxy">Double Proxy</a></li>
-  <li><a href="#sshutling-through-space" id="toc-sshutling-through-space" class="nav-link" data-scroll-target="#sshutling-through-space">Sshutling through space</a></li>
-  </ul></li>
+  <li><a href="#lets-access" id="toc-lets-access" class="nav-link" data-scroll-target="#lets-access">Let’s Access!</a></li>
+  <li><a href="#stop-access" id="toc-stop-access" class="nav-link" data-scroll-target="#stop-access">Stop access</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Proxy</h1>
+<h1 class="title">Institute Server Access</h1>
 </div>
 
 
@@ -223,114 +218,232 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="whats-a-proxy" class="level1">
-<h1>What’s a Proxy</h1>
-<p>The IISER network is a bit different than your usual home/WiFi network. Along with connecting to the WiFi with the WiFi key provided by the Computer Center, you need to also set a setting known as the proxy server.</p>
-<p>The proxy server basically acts as an intermediate hop before your data reaches the internet. You can’t bypass the proxy server unless you use a VPN. We need to tell applications which proxy server to use.</p>
+<section id="institute-server-access" class="level1">
+<h1>Institute Server Access</h1>
+<p>This page runs you through the setup to access the gui for the institute servers using vlc. <a href="#summary">Tl;dr</a></p>
 </section>
-<section id="the-proxy-settings" class="level1">
-<h1>The proxy settings</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ip</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">nkn1</span><span class="kw">:</span><span class="at"> </span><span class="fl">172.16.2.250</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">bsnl1</span><span class="kw">:</span><span class="at"> </span><span class="fl">172.16.2.251</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">bsnl2</span><span class="kw">:</span><span class="at"> </span><span class="fl">172.16.2.252</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">nkn2</span><span class="kw">:</span><span class="at"> </span><span class="fl">172.16.2.253</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">port</span><span class="kw">:</span><span class="at"> </span><span class="dv">3128</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> http://ip:port/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-warn">
-<p>Note that the institute doesn’t have an HTTPS proxy. Thus, for both HTTP and HTTPS proxy settings, use <code>http://ip:port/</code>.</p>
-</div>
+<section id="why-should-i-bother" class="level1">
+<h1>Why should I bother?</h1>
+<p>A lot of students do not have laptops and are unable to run some programs and analysis required for some courses, especially computational courses, and lab courses. While this doesn’t come close to a laptop experience, its a step closer to closing the digital divide between our peers.</p>
+<p>Even those who do have a laptop can be benefitted by using this to download the articles and journals that can be accessed for free from the institute networks.</p>
+<p>All you need for this is an android phone which is relatively new (3 yr old).</p>
+<p><strong>We also request people not to use the gui if you are using the compute servers for heavy computation. Please port forward as necessary. GUI puts quite some strain on the server, which mostly is unnecessary, except if one doesn’t have a laptop.</strong></p>
 </section>
-<section id="setting-the-proxy-url" class="level1">
-<h1>Setting the proxy url</h1>
-<section id="windows" class="level2">
-<h2 class="anchored" data-anchor-id="windows">Windows</h2>
-<p>For GUI Windows applications, open Settings, search for Proxy and set proxy. Follow <a href="https://www.digitalcitizen.life/how-set-proxy-server-windows-10/">this</a></p>
-<p>If in case you are unable to connect despite changing the proxy, try the restart-every-layer-method. Try restarting the application/browser. Then try signing out and signing back in (not just <em>locking</em>). Then try restarting the computer. Or you know what? Just restart the computer. It generally works.</p>
+<section id="interesting-lets-go" class="level1">
+<h1>Interesting! Let’s go</h1>
+<section id="setting-up-your-device" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-device">Setting up your device</h2>
+<ol type="1">
+<li><a href="https://www.termius.com/android">Termius - SSH app</a></li>
+<li><a href="https://www.realvnc.com/en/connect/download/viewer/">VNCViewer - Remote viewing app</a></li>
+</ol>
 </section>
-<section id="linux" class="level2">
-<h2 class="anchored" data-anchor-id="linux">Linux</h2>
-<section id="global" class="level3">
-<h3 class="anchored" data-anchor-id="global">Global</h3>
-<p>The method is largely similar to the windows way. Open settings, search for Proxy and set proxy.</p>
-<p>Instructions for <a href="https://phoenixnap.com/kb/ubuntu-proxy-settings">GNOME</a> and <a href="https://askubuntu.com/a/444887">KDE</a>. If you use the default DE of Ubuntu, you are probably using GNOME.</p>
-<p>If you aren’t using a DE, but rather relying on a WM like i3, then you will also need to set the environment variables in <code>/etc/environment</code>, and log out and log back in every time you need to change the proxy settings, or at least stop the WM, run <code>source /etc/environment</code> and start the WM again. If this gets annoying, check out the <a href="#expert-tips">Expert Tips section</a>This is because all children processes use the same proxy settings as the parent, and changing the proxy settings isn’t enough to change your WM’s environment variables. For a much more detailed explanation and Tips and Tricks, see <a href="https://wiki.archlinux.org/title/Proxy_server">the archwiki page on proxies</a>. Read it, its useful.</p>
+<section id="termius-setup" class="level2">
+<h2 class="anchored" data-anchor-id="termius-setup">Termius setup</h2>
+<section id="add-hosts" class="level3">
+<h3 class="anchored" data-anchor-id="add-hosts">Add Hosts</h3>
+<ol type="1">
+<li><p>Create a free account on Termius and set up.</p></li>
+<li><p>Open the Hosts tab.</p></li>
+<li><p>Touch the + button</p></li>
+<li><p>Click <code>New host</code></p></li>
+<li><p>Enter the following info:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alias</td>
+<td>transit</td>
+</tr>
+<tr class="even">
+<td>Hostname or IP Address</td>
+<td>14.139.227.194</td>
+</tr>
+<tr class="odd">
+<td>SSH</td>
+<td>Checked</td>
+</tr>
+<tr class="even">
+<td>Mosh</td>
+<td>Unchecked</td>
+</tr>
+<tr class="odd">
+<td>Username</td>
+<td>transit</td>
+</tr>
+<tr class="even">
+<td>Password</td>
+<td>Ask personally to people</td>
+</tr>
+<tr class="odd">
+<td>Rest of the fields</td>
+<td>Empty</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Click the <code>tick</code> on the top right to save.</p></li>
+<li><p>Touch the + button</p></li>
+<li><p>Click <code>New host</code></p></li>
+<li><p>Enter the following info:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alias</td>
+<td>ldap</td>
+</tr>
+<tr class="even">
+<td>Hostname or IP Address</td>
+<td>172.16.2.59</td>
+</tr>
+<tr class="odd">
+<td>SSH</td>
+<td>Checked</td>
+</tr>
+<tr class="even">
+<td>Mosh</td>
+<td>Unchecked</td>
+</tr>
+<tr class="odd">
+<td>Username</td>
+<td><code>your roll number</code></td>
+</tr>
+<tr class="even">
+<td>Password</td>
+<td><code>your moodle password</code></td>
+</tr>
+<tr class="odd">
+<td>Rest of the fields</td>
+<td>Empty</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Tap the <code>host chaining</code> field, tap add host, tap <code>transit</code></p></li>
+<li><p>Click the <code>tick</code> on the top right to save.</p></li>
+</ol>
 </section>
-<section id="shell" class="level3">
-<h3 class="anchored" data-anchor-id="shell">Shell</h3>
-<p>Almost all Linux applications, especially command line applications use the following envars. Simply paste this in your <code>.bashrc</code> or equivalent, making sure to replace <code>ip</code> and <code>port</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">http_proxy</span><span class="op">=</span><span class="st">"http://ip:port/"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">ftp_proxy</span><span class="op">=</span><span class="st">"ftp://ip:port/"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">rsync_proxy</span><span class="op">=</span><span class="st">"rsync://ip:port/"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">no_proxy</span><span class="op">=</span><span class="st">"localhost,ip/32,192.168.1.1/32,::1,*.local,.ts.net"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HTTP_PROXY</span><span class="op">=</span><span class="st">"http://ip:port/"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">FTP_PROXY</span><span class="op">=</span><span class="st">"ftp://ip:port/"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">RSYNC_PROXY</span><span class="op">=</span><span class="st">"rsync://ip:port/"</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">NO_PROXY</span><span class="op">=</span><span class="st">"localhost,ip/32,192.168.1.1/32,::1,*.local"</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">https_proxy</span><span class="op">=</span><span class="st">"http://ip:port/"</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HTTPS_PROXY</span><span class="op">=</span><span class="st">"http://ip:port/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final thoughts</h3>
-<p>Setting the proxy settings via Settings and the envars should generally be enough for most applications. Some applications, notably, all browsers and Zoom, have an in-app way to set the proxy too.</p>
-</section>
-</section>
-<section id="specific-applications" class="level2">
-<h2 class="anchored" data-anchor-id="specific-applications">Specific Applications</h2>
-<p>This should only be used if previous methods fail.</p>
-<section id="conda" class="level3">
-<h3 class="anchored" data-anchor-id="conda">Conda</h3>
-<p>Write the following to <code>~/.condarc</code>. On windows, this would be <code>C:/Users/yourname/.condarc</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> defaults</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Show channel URLs when displaying what is going to be downloaded and</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># in 'conda list'. The default is False.</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">show_channel_urls</span><span class="kw">:</span><span class="at"> </span><span class="ch">True</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">allow_other_channels</span><span class="kw">:</span><span class="at"> </span><span class="ch">True</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">proxy_servers</span><span class="kw">:</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">http</span><span class="kw">:</span><span class="at"> http://ip:port</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">https</span><span class="kw">:</span><span class="at"> http://ip:port</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ssl_verify</span><span class="kw">:</span><span class="at"> </span><span class="ch">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="pip" class="level3">
-<h3 class="anchored" data-anchor-id="pip">pip</h3>
-<p>Follow one of <a href="https://pip.pypa.io/en/stable/user_guide/#using-a-proxy-server">these</a></p>
-</section>
-<section id="julia" class="level3">
-<h3 class="anchored" data-anchor-id="julia">Julia</h3>
-<p>Add these lines to <code>~/.julia/config/startup.jl</code>, which will execute on each new Julia session:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cn">ENV</span>[<span class="st">"HTTP_PROXY"</span>] <span class="op">=</span> <span class="st">"http://ip:port"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cn">ENV</span>[<span class="st">"HTTPS_PROXY"</span>] <span class="op">=</span> <span class="st">"http://ip:port"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="npm" class="level3">
-<h3 class="anchored" data-anchor-id="npm">NPM</h3>
-<p>Write this to <code>~/.npmrc</code></p>
-<pre class="code"><code>strict-ssl=false
-proxy=http://127.0.0.1:8888/
-https-proxy=http://127.0.0.1:8888/</code></pre>
+<section id="add-port-forward-rules" class="level3">
+<h3 class="anchored" data-anchor-id="add-port-forward-rules">Add Port Forward rules</h3>
+<ol type="1">
+<li><p>Choose a number &gt; 5900. This will act as an identifier for your connection. Remember it</p></li>
+<li><p>In termius, open the <code>port forwarding</code> tab</p></li>
+<li><p>Touch the + button</p></li>
+<li><p>Enter the following info:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Label</td>
+<td>vnc port forward</td>
+</tr>
+<tr class="even">
+<td>Type</td>
+<td>Local Rule</td>
+</tr>
+<tr class="odd">
+<td>Host From</td>
+<td>transit</td>
+</tr>
+<tr class="even">
+<td>Port From</td>
+<td>Your number &gt;5905</td>
+</tr>
+<tr class="odd">
+<td>Host to</td>
+<td>localhost</td>
+</tr>
+<tr class="even">
+<td>Port to</td>
+<td>Your number &gt;5905</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Click the <code>tick</code> on the top right to save.</p></li>
+</ol>
+<p><strong>Phew! Are we done yet?</strong></p>
+<p>Nope, but JUST a little more</p>
 </section>
 </section>
+<section id="server-setup" class="level2">
+<h2 class="anchored" data-anchor-id="server-setup">Server setup</h2>
+<ol type="1">
+<li>In termius, tap <code>ldap</code></li>
+<li>If a dialog box opens, click <code>connect</code></li>
+<li>A terminal will open. You can actually run commands on the institute server now!</li>
+<li>Copy-Paste the following:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sL</span> https://iiserm.github.io/server_access/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Type <code>exit</code> and enter</li>
+</ol>
 </section>
-<section id="expert-tips" class="level1">
-<h1>Expert Tips</h1>
-<section id="double-proxy" class="level2">
-<h2 class="anchored" data-anchor-id="double-proxy">Double Proxy</h2>
-<p>How to cut a diamond? With a diamond. How to fix most proxy problems? With another proxy. Set up a local transparent proxy server at <code>127.0.0.1:8888</code>, and point everything at it. Then set the upstream proxy of your proxy server as the IISER server. Most transparent proxies allow you to hot change the upstream. Thus, you can change/turn off the IISER proxy without having to change app settings. One such server is <a href="https://tinyproxy.github.io/">tinyproxy</a>.</p>
-<pre class="code"><code>Port 8888
-Listen 127.0.0.1
-Timeout 600
-Allow 127.0.0.1
-Upstream http 172.16.2.250:3128</code></pre>
+<section id="vnc-viewer-setup" class="level2">
+<h2 class="anchored" data-anchor-id="vnc-viewer-setup">VNC Viewer setup</h2>
+<ol type="1">
+<li>Open VNCViewer</li>
+<li>Touch the + button</li>
+<li>Fill address as <code>localhost:your_number</code></li>
+<li>Fill Name as <code>IISER</code></li>
+<li>Touch create</li>
+</ol>
 </section>
-<section id="sshutling-through-space" class="level2">
-<h2 class="anchored" data-anchor-id="sshutling-through-space">Sshutling through space</h2>
-<p><em>Some</em> limitations of the proxy server, particularly blocked email ports can be overcome by tcp-over-ssh tunnelling. Use <a href="https://github.com/sshuttle/sshuttle">sshutle</a> and ssh to a <strong>server that sits outside the institute network</strong>.</p>
+<section id="done" class="level2">
+<h2 class="anchored" data-anchor-id="done">DONE!</h2>
+</section>
+</section>
+<section id="lets-access" class="level1">
+<h1>Let’s Access!</h1>
+<ol type="1">
+<li>Open Termius and go to Hosts tab</li>
+<li>Touch <code>ldap</code></li>
+<li>If a dialog box opens, click <code>connect</code></li>
+<li>Type <code>source startvnc.sh port_num</code>, where <code>port_num</code> is the number&gt;5905 you chose while creating the port forward.</li>
+<li>Hit enter</li>
+<li>Follow the steps</li>
+<li>Once a lot of output comes up, open VNCViewer</li>
+<li>Tap <code>IISER</code></li>
+<li>Enter the password you chose during the Server setup</li>
+<li>Save the password for future ease</li>
+<li>DONE!</li>
+</ol>
+</section>
+<section id="stop-access" class="level1">
+<h1>Stop access</h1>
+<ol type="1">
+<li>Click on the start button of the server gui, and go to the power tab</li>
+<li>Click logout, and then logout again. In a few seconds, it will “close unexpectedly”, this is ok.</li>
+<li>In termius, type <code>exit</code> and enter</li>
+<li>Done!</li>
+</ol>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<ol type="1">
+<li>ssh into ldap via transit</li>
+<li>Download tigervnc standalone binary from <a href="https://bintray.com/tigervnc/stable/tigervnc#files">here</a></li>
+<li>reverse port forward from <code>ldap:vncport</code> to <code>transit:vncport</code></li>
+<li>Start tigervnc server on <code>:(vncport-5900)</code></li>
+<li>Port forward <code>transit:vncport</code> to <code>localhost:vncport</code></li>
+<li>Connect using vnc viewer to <code>localhost:vncport</code></li>
+</ol>
+<p>See <a href="install.sh">install script</a> for setup and <a href="startvnc.sh">server startup script</a> for startup</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
