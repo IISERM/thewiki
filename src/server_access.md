@@ -26,38 +26,40 @@ All you need for this is an android phone which is relatively new (3 yr old).
 
 ## Termius setup
 
+You don't really need this, you can just use plain ssh if you know how to.
+
 ### Add Hosts
 
-1. Create a free account on Termius and set up.
+1. Create a free account on Termius and set up. 
 2. Open the Hosts tab.
 3. Touch the + button
 4. Click `New host`
 5. Enter the following info:
 
-    | Name                   | Value                    |
-    | ---------------------- | ------------------------ |
-    | Alias                  | transit                  |
-    | Hostname or IP Address | 14.139.227.194           |
-    | SSH                    | Checked                  |
-    | Mosh                   | Unchecked                |
-    | Username               | transit                  |
-    | Password               | Ask personally to people |
-    | Rest of the fields     | Empty                    |
+    | Name                   | Value                         |
+    | ---------------------- | ----------------------------- |
+    | Alias                  | transit                       |
+    | Hostname or IP Address | 14.139.227.194                |
+    | SSH                    | Checked                       |
+    | Mosh                   | Unchecked                     |
+    | Username               | transit                       |
+    | Password               | Ask on appropriate club group |
+    | Rest of the fields     | Empty                         |
 
 6. Click the `tick` on the top right to save.
 7. Touch the + button
 8. Click `New host`
 9. Enter the following info:
 
-    | Name                   | Value                  |
-    | ---------------------- | ---------------------- |
-    | Alias                  | ldap                   |
-    | Hostname or IP Address | 172.16.2.59            |
-    | SSH                    | Checked                |
-    | Mosh                   | Unchecked              |
-    | Username               | `your roll number`     |
-    | Password               | `your moodle password` |
-    | Rest of the fields     | Empty                  |
+    | Name                   | Value               |
+    | ---------------------- | ------------------- |
+    | Alias                  | iiserhpc            |
+    | Hostname or IP Address | 172.16.3.200        |
+    | SSH                    | Checked             |
+    | Mosh                   | Unchecked           |
+    | Username               | `your roll number`  |
+    | Password               | `your hpc password` |
+    | Rest of the fields     | Empty               |
 
 10. Tap the `host chaining` field, tap add host, tap `transit`
 11. Click the `tick` on the top right to save.
@@ -91,7 +93,7 @@ Nope, but JUST a little more
 3. A terminal will open. You can actually run commands on the institute server now!
 4. Copy-Paste the following:
 ```bash
-curl -sL https://iiserm.github.io/server_access/install.sh | bash
+curl -sL https://iiserm.github.io/server_access/server_access_install.sh | bash
 ```
 
 5. Type `exit` and enter
@@ -131,9 +133,9 @@ curl -sL https://iiserm.github.io/server_access/install.sh | bash
 
 1. ssh into ldap via transit
 2. Download tigervnc standalone binary from [here](https://bintray.com/tigervnc/stable/tigervnc#files)
-3. reverse port forward from `ldap:vncport` to `transit:vncport`
+3. reverse port forward from `iiserhpc:vncport` to `transit:vncport`
 4. Start tigervnc server on `:(vncport-5900)`
 5. Port forward `transit:vncport` to `localhost:vncport`
 6. Connect using vnc viewer to `localhost:vncport`
 
-See [install script](install.sh) for setup and [server startup script](startvnc.sh) for startup
+See [install script](server_access_install.sh) for setup and [server startup script](server_access_startvnc.sh) for startup
