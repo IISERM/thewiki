@@ -240,6 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="termius-setup" class="level2">
 <h2 class="anchored" data-anchor-id="termius-setup">Termius setup</h2>
+<p>You don’t really need this, you can just use plain ssh if you know how to.</p>
 <section id="add-hosts" class="level3">
 <h3 class="anchored" data-anchor-id="add-hosts">Add Hosts</h3>
 <ol type="1">
@@ -278,7 +279,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Password</td>
-<td>Ask personally to people</td>
+<td>Ask on appropriate club group</td>
 </tr>
 <tr class="odd">
 <td>Rest of the fields</td>
@@ -300,11 +301,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Alias</td>
-<td>ldap</td>
+<td>iiserhpc</td>
 </tr>
 <tr class="even">
 <td>Hostname or IP Address</td>
-<td>172.16.2.59</td>
+<td>172.16.3.200</td>
 </tr>
 <tr class="odd">
 <td>SSH</td>
@@ -320,7 +321,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Password</td>
-<td><code>your moodle password</code></td>
+<td><code>your hpc password</code></td>
 </tr>
 <tr class="odd">
 <td>Rest of the fields</td>
@@ -387,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>A terminal will open. You can actually run commands on the institute server now!</li>
 <li>Copy-Paste the following:</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sL</span> https://iiserm.github.io/server_access/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sL</span> https://iiserm.github.io/server_access/server_access_install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="5" type="1">
 <li>Type <code>exit</code> and enter</li>
 </ol>
@@ -436,12 +437,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>ssh into ldap via transit</li>
 <li>Download tigervnc standalone binary from <a href="https://bintray.com/tigervnc/stable/tigervnc#files">here</a></li>
-<li>reverse port forward from <code>ldap:vncport</code> to <code>transit:vncport</code></li>
+<li>reverse port forward from <code>iiserhpc:vncport</code> to <code>transit:vncport</code></li>
 <li>Start tigervnc server on <code>:(vncport-5900)</code></li>
 <li>Port forward <code>transit:vncport</code> to <code>localhost:vncport</code></li>
 <li>Connect using vnc viewer to <code>localhost:vncport</code></li>
 </ol>
-<p>See <a href="install.sh">install script</a> for setup and <a href="startvnc.sh">server startup script</a> for startup</p>
+<p>See <a href="server_access_install.sh">install script</a> for setup and <a href="server_access_startvnc.sh">server startup script</a> for startup</p>
 
 
 </section>
